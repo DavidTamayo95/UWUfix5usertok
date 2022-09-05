@@ -98,7 +98,7 @@ def processUploadFiles(filename,filesize,files,update,bot,message,thread=None,jd
             user = user_info['moodle_user']
             passw = user_info['moodle_password']
             repoid = user_info['moodle_repo_id']
-            token = moodlews.get_webservice_token(host,user,passw,proxy=proxy)
+            token = 'cb0a112943dc889d5f247653b8c155b8'
             if token == None:
                 token = moodlews.get_webservice_token(host,user,passw,proxy=proxy)
                 if token == None:
@@ -199,7 +199,7 @@ def onmessage(update,bot:ObigramClient):
         #tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = 'studio_apps_dev'
+        tl_admin_user = 'David_7amayo'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -216,7 +216,7 @@ def onmessage(update,bot:ObigramClient):
                 user_info = jdb.get_user(username)
                 jdb.save()
         else:
-            mensaje = "No tienes acceso.\n👨🏻‍💻Dev: @studio_apps_dev\n"
+            mensaje = "No tienes acceso.\n👨🏻‍💻Dev: @David_7amayo\n"
             intento_msg = "💢El usuario @"+username+ "💢"
             bot.sendMessage(update.message.chat.id,mensaje)
             bot.sendMessage(2055672924,intento_msg)
@@ -469,7 +469,7 @@ def onmessage(update,bot:ObigramClient):
   
 
 def main():
-    bot_token = '5220749331:AAGN3jVAz52epm9nEc5gei0riY-DKqRvdbs'
+    bot_token = '5751430858:AAG3YRPSv1YYb3WCWi0FDyQ5YX37DvMUiE0'
     
 
     bot = ObigramClient(bot_token)
